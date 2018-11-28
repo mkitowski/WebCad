@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.main {
+    width: 1240px;
+    margin: 0 auto;
+}
+.canva {
+    background: #2B2B2B;
+    cursor: crosshair;
+    width: 100%;
+    height: 600px;
+    margin: 50px auto 0;
+    border: 1px solid #2B2B2B;
+    position: relative;
+}
+
+.bottom_bar {
+    width: 100%;
+    height :50px;
+    border: 1px solid #2B2B2B;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.white {
+    border: 1px solid white;
+    height: 1px;
+}
