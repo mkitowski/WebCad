@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function (x, y) {
         ctx.scale(dpr, dpr);
         return ctx;
     }
+    var ctx = setupCanvas(canva);
 
     function line(x1,y1,x2,y2,idn) {
         this.startX = x1;
@@ -51,13 +52,13 @@ document.addEventListener('DOMContentLoaded', function (x, y) {
         this.lineLength = Math.sqrt(Math.pow(Math.abs(x1-x2),2)+Math.pow(Math.abs(y1 - y2), 2));
         this.rotation = Math.atan(Math.abs(x1-x2)/Math.abs(y1-y2));
         this.obj = function () {
-            var newline = setupCanvas(canva);
-            newline.beginPath();
-            newline.moveTo(this.startX, this.starty);
-            newline.lineTo(this.finishx, this.finishy);
-            newline.lineWidth = 5;
-            newline.strokeStyle = '#fff';
-            newline.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(this.startX, this.starty);
+            ctx.lineTo(this.finishx, this.finishy);
+            ctx.lineWidth = 5;
+            ctx.strokeStyle = '#fff';
+            ctx.stroke();
 
             idn++;
         }
