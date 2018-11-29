@@ -7,7 +7,7 @@
     width: 1240px;
     margin: 0 auto;
 }
-.canva {
+canvas {
     background: #2B2B2B;
     cursor: crosshair;
     width: 100%;
